@@ -15,6 +15,15 @@
         'class' => 'form-horizontal',
         'files' => true
     ]) !!}
+        <div class="form-group {{ $errors->any() ? 'has-error' : ''}}">
+            <div class="col-sm-6 col-sm-offset-3">
+                    <ul class="alert alert-danger">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+            </div>
+        </div>
 
         %%formFieldsHtml%%
 
