@@ -1,0 +1,24 @@
+{
+    "name": "prem/crud-generator",
+    "description": "CRUD generator for admin side",
+    "authors": [
+        {
+            "name": "Prem Kumar Singh",
+            "email": "premsingh57@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "~5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Prem\\Crudgenerator\\" : "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
