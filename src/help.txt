@@ -1,1 +1,3 @@
 development repo
+
+{--migration=yes : Allow creating migration ? yes|no.} added
