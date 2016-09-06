@@ -110,10 +110,10 @@ php artisan crud:view posts --fields="title#string; body#text" --view-path="dire
 
 By default, the generator will attempt to append the crud route to your *routes.php* file. If you don't want the route added, you can use this option ```--route=no```.
 
-By default, the generator will attempt to create the migration file. If you don't want the create migration file , you can use this option ```--migration=no```.
+By default, the generator will attempt to create the migration file. If you don't want to create migration file , you can use this option ```--migration=no```.
 
 
-*If necessary, run migrate command and include the route for your crud as well.*
+If you choose not to run migrations  automatically , run migration command.*
 
 ```
 
