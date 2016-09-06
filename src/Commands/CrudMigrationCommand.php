@@ -32,6 +32,20 @@ class CrudMigrationCommand extends GeneratorCommand
      */
     protected $type = 'Migration';
 
+
+    /**
+     * Execute the console command.
+     *
+     * @return bool|null
+     */
+    public function fire()
+    {
+        parent::fire();
+        if ($this->confirm('Do you want to run all migration now?')) {
+            $this->call('migrate');
+        }
+    }
+
     /**
      * Get the stub file for the generator.
      *
@@ -245,10 +259,10 @@ class CrudMigrationCommand extends GeneratorCommand
         });";
 
         $schemaDown = "Schema::drop('" . $tableName . "');";
-
         return $this->replaceSchemaUp($stub, $schemaUp)
             ->replaceSchemaDown($stub, $schemaDown)
             ->replaceClass($stub, $className);
+
     }
 
     /**
