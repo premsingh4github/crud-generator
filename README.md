@@ -17,7 +17,7 @@
     'providers' => [
         ...
 
-        Prem\Crudgenerator\CrudgeneratorServiceProvider,
+        Prem\Crudgenerator\CrudgeneratorServiceProvider::class,
     ],
     ```
 3. Install **laravelcollective/html** helper package.
